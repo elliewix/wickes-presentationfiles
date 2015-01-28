@@ -1737,20 +1737,21 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="practical-programming-ala-lita-workshop">Practical Programming, ALA-LITA workshop</h1>
 <h2 id="welcome">Welcome!!</h2>
-<p><a href="https://github.com/elliewix/">github link to presentation materials</a></p>
+<p><a href="http://nbviewer.ipython.org/github/elliewix/wickes-presentationfiles/blob/master/LITA-PracticalProgramming/PracticalProgramming-LITA.ipynb">NBViewer link to presentation materials</a></p>
 <h2 id="schedule">Schedule</h2>
 <ul>
 <li>8:30 - 9:00: Introductions</li>
 <li>9:00 - 9:30: Software checks</li>
-<li>9:30 - 10:00: Historical overview of programming languages</li>
+<li>9:30 - 10:00: What are programming languages and what is Python?</li>
 <li>10:00 - 10:30: Talking through a programming problem</li>
 <li>10:30 - 10:45: Break!</li>
-<li>10:45 - 11:30: Data types and operators</li>
+<li>10:45 - 11:30: Data types, operators, and variables (oh my!)</li>
 <li>11:30 - 12:00: Containers</li>
 <li>12:00 - 1:00: Lunch</li>
-<li>1:00 - 1:30: Let's dig in</li>
-<li>2:00 - 3:00: Looping</li>
-<li>3:00 - 3:30: Discussion on searching strategies</li>
+<li>1:00 - 1:30: Working with files</li>
+<li>2:00 - 2:30: Looping</li>
+<li>2:30 - 3:00: Conditionals and working with data</li>
+<li>3:00 - 3:30: Discussion on searching strategies (and buffer time)</li>
 <li>3:30 - 4:00: Where to go from here</li>
 </ul>
 <h1 id="pre-introduction-task">Pre-introduction task!</h1>
@@ -2096,13 +2097,47 @@ Namespaces are one honking great idea -- let&apos;s do more of those!
 <li>This speaks to the specialization that has occured in our modern era.</li>
 </ul></li>
 </ul>
-<p><img src='http://hightechhistory.files.wordpress.com/2010/04/history-poster20.gif'/></p>
+<p><a href = 'http://hightechhistory.files.wordpress.com/2010/04/history-poster20.gif'><img src='http://hightechhistory.files.wordpress.com/2010/04/history-poster20.gif'/></a></p>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="the-modern-programming-languges">The modern programming languges</h2>
 <p>This image provides an interesting overview of how these languages are used in industry.</p>
 <p>Note that Python is an industry standard language.</p>
 <p><a href = 'http://cdn2.carlcheo.com/wp-content/uploads/2014/12/which-programming-language-should-i-learn-first-infographic.png'>This image is way too big to display here. Click!</a></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="working-through-a-programming-problem">Working through a programming problem</h1>
+<p>Let's work through a problem just using your own language.</p>
+<p>Task: Write a set of rules for assigning a letter grade to a numerical score.</p>
+<p>Write out the rules using whatever natural language you are comfortable with.</p>
+<p>Be sure to think about:</p>
+<ul>
+<li>What kind of input are you expecting?</li>
+<li>What are 'good' values and what are 'bad' values?
+<ul>
+<li>Should you handle bad values differently?</li>
+</ul></li>
+<li>Are all 'good' values supported?</li>
+</ul>
+<p>Take about 10 minues to brainstorm. Feel free to work on groups and ask each other questions.</p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="test-values">Test values</h2>
+<ul>
+<li>101</li>
+<li>99.9</li>
+<li>70</li>
+<li>49</li>
+<li>0</li>
+<li>100</li>
+<li>-1</li>
+<li>150</li>
+</ul>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="what-solutions-did-we-come-up-with">What solutions did we come up with?</h2>
 </div></section>
     </section><section>
     <section>
@@ -3153,19 +3188,715 @@ In&nbsp;[30]:
 <div class="text_cell_render border-box-sizing rendered_html">
 
 </div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="more-operators">More operators</h2>
+<p>The concept of 'overloading' in programming means that the same name or symbol may be used in multiple contexts. Some of the operators that we just learned about will work with other data types than numbers.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="s">&quot;a&quot;</span> <span class="o">+</span> <span class="s">&quot;a&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[38]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;aa&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[37]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre>
+<div class="highlight"><pre><span class="s">&quot;hello&quot;</span> <span class="o">*</span> <span class="mi">4</span>
 </pre></div>
 
 </div>
 </div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[37]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;hellohellohellohello&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="s">&quot;hello&quot;</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="s">&quot;world&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[39]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;hello     world&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are more of these, but we don't know those data types yet!</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="variables">Variables</h1>
+<p>So now that we can do some neat things with objects and operations, let's start talking about variables.</p>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sometimes we need to give things name. For example, if a value will be repeated throughout a program you might want to just name it so you can ask for it later.</p>
+<p>Imagine mad libs. It asks you for nouns, names, verbs, adjectives, etc. You supply them, and then a story is built from those values.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[49]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Dani&quot;</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s">&quot;teal&quot;</span>
+<span class="n">noun</span> <span class="o">=</span> <span class="s">&quot;cat&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot; asked me, </span><span class="se">\&quot;</span><span class="s">So what kind of &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; do you want?</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="k">print</span> <span class="s">&quot;I don&#39;t know what kind of &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; I want!  Who wants a &quot;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot;?&quot;</span>
+<span class="k">print</span> <span class="s">&quot;So I just said, </span><span class="se">\&quot;</span><span class="s">Give me whatever kind of &quot;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; you have in stock, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Dani asked me, &quot;So what kind of cat do you want?&quot;
+I don&apos;t know what kind of cat I want!  Who wants a teal cat?
+So I just said, &quot;Give me whatever kind of teal cat you have in stock, Dani&quot;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's explore this more in PyCharm.</p>
+<p>Tasks:</p>
+<ul>
+<li>Change the values a few times</li>
+<li>Add a number in here
+<ul>
+<li>Example: &quot;Who wants 8 teal cats??&quot;</li>
+</ul></li>
+<li>Add an adjective
+<ul>
+<li>Example: &quot;Who wans 9 fizzy cats?&quot;</li>
+</ul></li>
+</ul>
+<p>Remember that you need <code>+</code> between all your elements. Just use one <code>=</code> sign for assignment. Be sure that your quotes match on either side.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="containers-in-context">Containers in context</h1>
+<p>Can we automatically generate madlibs using this base?</p>
+<ul>
+<li>A list of many colors to choose from</li>
+<li>Randomly choose any number</li>
+<li>A list of several nouns to choose from</li>
+</ul>
+<p>We need some way to keep each of these lists together.</p>
+<p>Python has a convenient data type, called the <code>list</code>.</p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="containers">Containers</h2>
+<p>We need a way of storing data, or objects, within our program. This allows us to group things together. So, let's meet Python's <code>list</code>.</p>
+<p>Lists are the most basic type of container. Imagine a list you might make, like a grocery list.</p>
+<ul>
+<li>You can fill it with anything, although there is usually a theme.</li>
+<li>There is an order, although sometimes it may be kind of arbitrary.</li>
+</ul>
+<p>On a more technical level:</p>
+<ul>
+<li>Lists are contained within <code>[]</code> (square brackets).</li>
+<li>Items in lists are separated by commas.</li>
+</ul>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="p">[]</span> <span class="c"># this is an empty list</span>
+<span class="k">print</span> <span class="p">[</span><span class="s">&quot;cat&quot;</span><span class="p">,</span> <span class="s">&quot;dog&quot;</span><span class="p">,</span> <span class="s">&quot;shark&quot;</span><span class="p">]</span> <span class="c"># a list of nouns</span>
+<span class="k">print</span> <span class="p">[</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">]</span> <span class="c"># a list of colors</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[]
+[&apos;cat&apos;, &apos;dog&apos;, &apos;shark&apos;]
+[&apos;red&apos;, &apos;yellow&apos;, &apos;green&apos;, &apos;blue&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="the-random-library">The <code>random</code> library</h2>
+<p>The <code>random</code> library happens to have a neat utility: <code>random.choice()</code>. This is the first real function that we're going to explore in depth.</p>
+<p>What does the documentation say?</p>
+<ul>
+<li>random.choice(seq)
+<ul>
+<li>Return a random element from the non-empty sequence seq. If seq is empty, raises IndexError.</li>
+</ul></li>
+</ul>
+<p>This function will choose a random element from a given container. We need to &quot;pass&quot; <code>random.choice()</code> a container. This just means that we need put our container inside of the <code>()</code>.</p>
+</div></section><section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Elizabeth&quot;</span><span class="p">,</span> <span class="s">&quot;Dani&quot;</span><span class="p">,</span> <span class="s">&quot;Fizzpop&quot;</span><span class="p">]</span>
+<span class="n">nouns</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;cat&quot;</span><span class="p">,</span> <span class="s">&quot;dog&quot;</span><span class="p">,</span> <span class="s">&quot;shark&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">]</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+<span class="n">noun</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">nouns</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot; asked me, </span><span class="se">\&quot;</span><span class="s">So what kind of &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; do you want?</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="k">print</span> <span class="s">&quot;I don&#39;t know what kind of &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; I want!  Who wants a &quot;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot;?&quot;</span>
+<span class="k">print</span> <span class="s">&quot;So I just said, </span><span class="se">\&quot;</span><span class="s">Give me whatever kind of &quot;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">noun</span> <span class="o">+</span> <span class="s">&quot; you have in stock, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Dani asked me, &quot;So what kind of shark do you want?&quot;
+I don&apos;t know what kind of shark I want!  Who wants a green shark?
+So I just said, &quot;Give me whatever kind of green shark you have in stock, Dani&quot;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Try running a script with this a few times. The number will keep changing.</p>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="helpful-list-code-formulas">Helpful <code>list</code> code formulas</h2>
+<p>Let's start with a list of assorted candy colors.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">bowl</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># how many elements are in it?</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+11
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># what are the unique values?</span>
+<span class="c"># the set() family of objects are great for doing this kind of work</span>
+<span class="n">uniques</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">uniques</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">uniques</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">uniques</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+set([&apos;blue&apos;, &apos;brown&apos;, &apos;green&apos;, &apos;yellow&apos;, &apos;red&apos;])
+&lt;type &apos;set&apos;&gt;
+5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># let&#39;s turn that back into a list</span>
+<span class="n">uniquelist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">uniques</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">uniquelist</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">uniquelist</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;blue&apos;, &apos;brown&apos;, &apos;green&apos;, &apos;yellow&apos;, &apos;red&apos;]
+&lt;type &apos;list&apos;&gt;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="list-slicing"><code>list</code> slicing</h2>
+<p>A <code>list</code> has an ordered index. This means we can access elements via their their index position.</p>
+<ul>
+<li>Slicing notation for a single element:
+<ul>
+<li><code>list_name[index_position]</code></li>
+</ul></li>
+<li>Slicing notation for a range of elements:
+<ul>
+<li><code>list_name[start:stop:step]</code></li>
+</ul></li>
+</ul>
+<p>Various warnings:</p>
+<ul>
+<li>Index positions start at <code>0</code> and NOT <code>1</code>.
+<ul>
+<li>Be very careful. It will take some time to get used to this.</li>
+</ul></li>
+<li><code>step</code> value is inclusive</li>
+<li><code>stop</code> position is exclusive
+<ul>
+<li>This means it will go &quot;up to but not including that position&quot;</li>
+</ul></li>
+<li><code>step</code> means &quot;how many elements should I step through at a time?&quot;</li>
+<li><code>start</code>, <code>stop</code>, and <code>step</code> are each optional, but the <code>:</code> should be retained to indicate what is being omitted.</li>
+</ul>
+<p>Let's switch to a list that will give us more informative feedback.</p>
+</div></section><section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">word_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">,</span> <span class="s">&#39;two&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">,</span> <span class="s">&#39;four&#39;</span><span class="p">,</span> <span class="s">&#39;five&#39;</span><span class="p">,</span> <span class="s">&#39;six&#39;</span><span class="p">,</span> <span class="s">&#39;seven&#39;</span><span class="p">,</span> <span class="s">&#39;eight&#39;</span><span class="p">,</span> <span class="s">&#39;nine&#39;</span><span class="p">,</span> <span class="s">&#39;ten&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_numbers</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+10
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># the first element</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+one
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># the last element</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+ten
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">bowl</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># the first four three elements, remember that stop is exclusive</span>
+<span class="k">print</span> <span class="n">bowl</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># start is optional if I mean for it to start at the beginning</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;red&apos;, &apos;blue&apos;, &apos;red&apos;]
+[&apos;red&apos;, &apos;blue&apos;, &apos;red&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="dictionaries">Dictionaries</h2>
+<p>Let's take a look at another type of container: the dictionary (<code>dict</code>).</p>
+<p>The <code>list</code> container we just learned about contains just a plain list of elements. However, <code>dict</code> is meant to contain a set of key/value pairs. These are stuctures meant to hold data values that are looked up via their keys. Imagine these are mini databases.</p>
+<p>For example, let's imagine we have a bowl of randomly colored candies. We can model this inside a list this way:</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">bowl</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can investigate a few things about our bowl.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span>  <span class="c"># the list has 11 elements</span>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span> <span class="c"># indeed, it is a list</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+11
+&lt;type &apos;list&apos;&gt;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can visually inspect the list and know that there are repeats of the colors within it. So what if we wanted to count how many of each color there were in the list?</p>
+<p>Python 2.7 and later has a great feature, called Counter().</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span> <span class="c"># import Counter into our namespace</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">bowl</span><span class="p">))</span> <span class="c"># I&#39;m converting this back to a dictionary, we&#39;ll talk about that later!</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+{&apos;blue&apos;: 1, &apos;brown&apos;: 2, &apos;green&apos;: 2, &apos;red&apos;: 4, &apos;yellow&apos;: 2}
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see the key/value pairs in this dictionary.</p>
+<p>The notation: <code>'blue': 1</code> means that the key of <code>'blue'</code> has the value of <code>1</code>.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
 
 </div>
     </div></section>
