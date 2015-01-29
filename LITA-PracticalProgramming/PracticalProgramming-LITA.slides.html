@@ -3590,7 +3590,8 @@ set([&apos;blue&apos;, &apos;brown&apos;, &apos;green&apos;, &apos;yellow&apos;,
 </div>
 
 </div>
-    </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -3623,9 +3624,11 @@ In&nbsp;[14]:
 </div>
 </div>
 
-</div></section><section>
+</div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="list-slicing"><code>list</code> slicing</h2>
+<p>Let's open up your IDLE client so you can try this out yourself! PyCharm will work, too, but might be a bit weird.</p>
 <p>A <code>list</code> has an ordered index. This means we can access elements via their their index position.</p>
 <ul>
 <li>Slicing notation for a single element:
@@ -3651,7 +3654,7 @@ In&nbsp;[14]:
 <li><code>step</code> means &quot;how many elements should I step through at a time?&quot;</li>
 <li><code>start</code>, <code>stop</code>, and <code>step</code> are each optional, but the <code>:</code> should be retained to indicate what is being omitted.</li>
 </ul>
-<p>Let's switch to a list that will give us more informative feedback.</p>
+<p>Let's switch to a list that will give us more informative feedback. You'll just need to memorize many of these notation tricks, so don't feel at a loss that you weren't able to derive them on your own.</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -3687,10 +3690,11 @@ In&nbsp;[18]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># the first element</span>
+<span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># the last element</span>
 </pre></div>
 
 </div>
@@ -3704,36 +3708,6 @@ In&nbsp;[19]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 one
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[20]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># the last element</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
 ten
 
 </pre>
@@ -3749,11 +3723,11 @@ ten
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="n">bowl</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># the first four three elements, remember that stop is exclusive</span>
-<span class="k">print</span> <span class="n">bowl</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># start is optional if I mean for it to start at the beginning</span>
+<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># the first four three elements, remember that stop is exclusive</span>
+<span class="k">print</span> <span class="n">word_numbers</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c"># start is optional if I mean for it to start at the beginning</span>
 </pre></div>
 
 </div>
@@ -3766,10 +3740,111 @@ In&nbsp;[22]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-[&apos;red&apos;, &apos;blue&apos;, &apos;red&apos;]
-[&apos;red&apos;, &apos;blue&apos;, &apos;red&apos;]
+[&apos;one&apos;, &apos;two&apos;, &apos;three&apos;]
+[&apos;one&apos;, &apos;two&apos;, &apos;three&apos;]
 
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">word_numbers</span><span class="p">)]</span> <span class="c"># start at the seventh element and go to the end</span>
+<span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="c"># same thing, but &#39;go to the end&#39; implied by omission</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;seven&apos;, &apos;eight&apos;, &apos;nine&apos;, &apos;ten&apos;]
+[&apos;seven&apos;, &apos;eight&apos;, &apos;nine&apos;, &apos;ten&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># stepping</span>
+<span class="k">print</span> <span class="n">word_numbers</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="c"># every other element</span>
+<span class="k">print</span> <span class="n">word_numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># go backwards through everthing</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;one&apos;, &apos;three&apos;, &apos;five&apos;, &apos;seven&apos;, &apos;nine&apos;]
+[&apos;ten&apos;, &apos;nine&apos;, &apos;eight&apos;, &apos;seven&apos;, &apos;six&apos;, &apos;five&apos;, &apos;four&apos;, &apos;three&apos;, &apos;two&apos;, &apos;one&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">word_numbers</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="c"># get used to seeing &#39;list index out of range&#39; errors</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">IndexError</span>                                Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-28-75a0c08ae074&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">----&gt; 1</span><span class="ansired"> </span><span class="ansigreen">print</span> word_numbers<span class="ansiblue">[</span><span class="ansicyan">11</span><span class="ansiblue">]</span><span class="ansiblue"></span>
+
+<span class="ansired">IndexError</span>: list index out of range</pre>
 </div>
 </div>
 
@@ -3784,6 +3859,19 @@ In&nbsp;[22]:
 <h2 id="dictionaries">Dictionaries</h2>
 <p>Let's take a look at another type of container: the dictionary (<code>dict</code>).</p>
 <p>The <code>list</code> container we just learned about contains just a plain list of elements. However, <code>dict</code> is meant to contain a set of key/value pairs. These are stuctures meant to hold data values that are looked up via their keys. Imagine these are mini databases.</p>
+<p>Dictionaries:</p>
+<ul>
+<li>have no particular order (no position index values)
+<ul>
+<li>this means that the order will change when you print the dictionary</li>
+<li>do not depend on the order to be the same</li>
+</ul></li>
+<li>value are looked up by the keys</li>
+<li>keys and values may be any object
+<ul>
+<li>including other <code>list</code>s or <code>dict</code>s, but be careful when doing this!</li>
+</ul></li>
+</ul>
 <p>For example, let's imagine we have a bowl of randomly colored candies. We can model this inside a list this way:</p>
 </div><div class="fragment">
     
@@ -3862,10 +3950,11 @@ In&nbsp;[6]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[30]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">bowl</span><span class="p">))</span> <span class="c"># I&#39;m converting this back to a dictionary, we&#39;ll talk about that later!</span>
+<div class="highlight"><pre><span class="n">counted_bowl</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">bowl</span><span class="p">))</span> <span class="c"># I&#39;m converting this back to a dictionary, we&#39;ll talk about that later!</span>
+<span class="k">print</span> <span class="n">counted_bowl</span>
 </pre></div>
 
 </div>
@@ -3894,12 +3983,75 @@ In&nbsp;[8]:
 <p>We can see the key/value pairs in this dictionary.</p>
 <p>The notation: <code>'blue': 1</code> means that the key of <code>'blue'</code> has the value of <code>1</code>.</p>
 </div>
-    </div><div class="fragment">
-    
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="helpful-dict-formulas">Helpful <code>dict</code> formulas</h2>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">counted_bowl</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="c"># get a list of all the keys</span>
+<span class="k">print</span> <span class="n">counted_bowl</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="c"># get a list of all the values</span>
+</pre></div>
 
 </div>
-    </div></section>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;blue&apos;, &apos;brown&apos;, &apos;green&apos;, &apos;red&apos;, &apos;yellow&apos;]
+[1, 2, 2, 4, 2]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="python-data-structure-documentation">Python data structure documentation</h2>
+<p>Have this page bookmarked or know how to get to it. Take some time later to look through the examples, and be sure to reference this page when you encounter something new that you need to do.<br><br></p>
+<iframe src="https://docs.python.org/2/tutorial/datastructures.html" width="700" height="350">
+</iframe>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
     </section>
 </div>
 </div>
