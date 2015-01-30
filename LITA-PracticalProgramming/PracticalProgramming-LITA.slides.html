@@ -1738,6 +1738,7 @@ text-align: inherit;
 <h1 id="practical-programming-ala-lita-workshop">Practical Programming, ALA-LITA workshop</h1>
 <h2 id="welcome">Welcome!!</h2>
 <p><a href="http://nbviewer.ipython.org/github/elliewix/wickes-presentationfiles/blob/master/LITA-PracticalProgramming/PracticalProgramming-LITA.ipynb">NBViewer link to presentation materials</a></p>
+<p>Or do this: http://goo.gl/3Lk9wk</p>
 <h2 id="schedule">Schedule</h2>
 <ul>
 <li>8:30 - 9:00: Introductions</li>
@@ -2138,7 +2139,25 @@ Namespaces are one honking great idea -- let&apos;s do more of those!
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="what-solutions-did-we-come-up-with">What solutions did we come up with?</h2>
-</div></section>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="example-in-python">Example in Python</h2>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2774,6 +2793,138 @@ False
 </div>
 
 </div>
+    </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="string-operations">String operations</h1>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="navigating-a-string">Navigating a string</h2>
+<p>Strings can be sliced, meaning that subsections can be accessed. The slicing notation is:</p>
+<p><code>string[start:stop:step]</code></p>
+<ul>
+<li><code>start</code> is the index position to start at
+<ul>
+<li>Assumes start if omitted</li>
+</ul></li>
+<li><code>stop</code> is the index position to stop at
+<ul>
+<li>Assumes end if omitted</li>
+</ul></li>
+<li><code>step</code> is how many positions to move over
+<ul>
+<li>Assumes 1 if omitted</li>
+</ul></li>
+</ul>
+<p>Let's open up your interactive session and test this out.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[78]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[:]</span> <span class="c"># everything</span>
+<span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">)]</span> <span class="c"># also everything</span>
+<span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="c"># skip every other letter</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+hello
+hello
+hlo
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[74]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># first letter</span>
+<span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># last letter</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+h
+o
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[77]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;hello&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c"># yup, indexing starts at 0</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+he
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You try a few on your own:</p>
+<ul>
+<li>get just the l's</li>
+<li>skip every three letters</li>
+</ul>
+<p>Anything else neat?</p>
+</div>
     </div></section>
     </section><section>
     <section>
@@ -3183,12 +3334,7 @@ In&nbsp;[30]:
 <h4 id="remainders-and-decimals-in-context">Remainders and decimals in context</h4>
 <p>(AKA: Elizabeth suffered through elementary school flashbacks to make this slide)</p>
 <p><img src = "longdivision2.png"/> <img src = "longdiv1.png"/></p>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-
 </div>
-    </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="more-operators">More operators</h2>
 <p>The concept of 'overloading' in programming means that the same name or symbol may be used in multiple contexts. Some of the operators that we just learned about will work with other data types than numbers.</p>
@@ -3297,7 +3443,7 @@ In&nbsp;[39]:
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are more of these, but we don't know those data types yet!</p>
+<p>Can you create a concatenation of the first and last letters of <code>&quot;hello&quot;</code>?</p>
 </div>
     </div></section>
     </section><section>
@@ -3751,8 +3897,7 @@ In&nbsp;[24]:
 </div>
 
 </div>
-    </div><div class="fragment">
-    
+    </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -3783,8 +3928,7 @@ In&nbsp;[27]:
 </div>
 </div>
 
-</div>
-    </div><div class="fragment">
+</div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -3872,13 +4016,15 @@ In&nbsp;[28]:
 <li>including other <code>list</code>s or <code>dict</code>s, but be careful when doing this!</li>
 </ul></li>
 </ul>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>For example, let's imagine we have a bowl of randomly colored candies. We can model this inside a list this way:</p>
 </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[53]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">bowl</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">,</span> <span class="s">&#39;brown&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">]</span>
@@ -3891,18 +4037,21 @@ In&nbsp;[2]:
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can investigate a few things about our bowl.</p>
+<p>We can investigate and do a few things to our bowl.</p>
 </div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[54]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span>  <span class="c"># the list has 11 elements</span>
 <span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span> <span class="c"># indeed, it is a list</span>
+<span class="n">bowl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">bowl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;yellow&#39;</span><span class="p">)</span> <span class="c"># I can add items</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span> <span class="c"># and then see that the length has increased</span>
 </pre></div>
 
 </div>
@@ -3917,6 +4066,7 @@ In&nbsp;[4]:
 <pre>
 11
 &lt;type &apos;list&apos;&gt;
+13
 
 </pre>
 </div>
@@ -3950,7 +4100,7 @@ In&nbsp;[6]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[55]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">counted_bowl</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">bowl</span><span class="p">))</span> <span class="c"># I&#39;m converting this back to a dictionary, we&#39;ll talk about that later!</span>
@@ -3967,7 +4117,7 @@ In&nbsp;[30]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-{&apos;blue&apos;: 1, &apos;brown&apos;: 2, &apos;green&apos;: 2, &apos;red&apos;: 4, &apos;yellow&apos;: 2}
+{&apos;blue&apos;: 1, &apos;brown&apos;: 2, &apos;green&apos;: 3, &apos;red&apos;: 4, &apos;yellow&apos;: 3}
 
 </pre>
 </div>
@@ -3986,15 +4136,16 @@ In&nbsp;[30]:
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="helpful-dict-formulas">Helpful <code>dict</code> formulas</h2>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[32]:
+In&nbsp;[56]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">counted_bowl</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="c"># get a list of all the keys</span>
 <span class="k">print</span> <span class="n">counted_bowl</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="c"># get a list of all the values</span>
+<span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="n">counted_bowl</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="c"># because this is returning a list, I can sum the total values</span>
 </pre></div>
 
 </div>
@@ -4008,7 +4159,38 @@ In&nbsp;[32]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [&apos;blue&apos;, &apos;brown&apos;, &apos;green&apos;, &apos;red&apos;, &apos;yellow&apos;]
-[1, 2, 2, 4, 2]
+[1, 2, 3, 4, 3]
+13
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[57]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">counted_bowl</span><span class="p">[</span><span class="s">&#39;brown&#39;</span><span class="p">]</span> <span class="c"># look up a value with a key</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+2
 
 </pre>
 </div>
@@ -4018,14 +4200,64 @@ In&nbsp;[32]:
 </div>
 
 </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[58]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre>
+<div class="highlight"><pre><span class="k">print</span> <span class="s">&#39;red&#39;</span> <span class="ow">in</span> <span class="n">counted_bowl</span> <span class="c"># check if a key exists in a dictionary</span>
 </pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+True
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[59]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">counted_bowl</span><span class="p">[</span><span class="s">&#39;fuzzy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c"># adds a new value if the key does not exist</span>
+<span class="n">counted_bowl</span><span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="c"># change a value if the key does exist</span>
+<span class="k">print</span> <span class="n">counted_bowl</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+{&apos;blue&apos;: 1, &apos;brown&apos;: 2, &apos;yellow&apos;: 3, &apos;green&apos;: 3, &apos;fuzzy&apos;: 0, &apos;red&apos;: 2}
+
+</pre>
+</div>
+</div>
 
 </div>
 </div>
@@ -4036,8 +4268,505 @@ In&nbsp;[]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="python-data-structure-documentation">Python data structure documentation</h2>
 <p>Have this page bookmarked or know how to get to it. Take some time later to look through the examples, and be sure to reference this page when you encounter something new that you need to do.<br><br></p>
-<iframe src="https://docs.python.org/2/tutorial/datastructures.html" width="700" height="350">
+<iframe src="https://docs.python.org/2/tutorial/datastructures.html" width="900" height="350">
 </iframe>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="looping-and-white-space">Looping and white space</h1>
+<p>Most of your programs are going to be centered around a loop. Below are two formulas for printing out all the contents of a list.</p>
+<p>This is also a great time to talk about white space. The indented code under the line beginning with <code>for</code> means that it belongs to that <code>for</code> block. Some programming languages use punctuation, like <code>{}</code>, to indicate what code belongs to that block. However, Python uses this white space to indicate block membership. I'm going to briefly touch on these and then move right into reading files, because looping is an essential element of working with that data.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[40]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># do something to all those things</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">number</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1
+2
+3
+4
+5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># do something so long as this condition is or is not met</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">numbers</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+1
+2
+3
+4
+5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="the-for-loop">The for loop</h2>
+<p>When working with data, the <code>for</code> loop will be what you use the most often. Here is the basic syntax:</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">iterable_variable</span> <span class="ow">in</span> <span class="n">iterable_item</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">iterable_variable</span> <span class="c"># or do whatever action you wanted...</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">candy</span> <span class="ow">in</span> <span class="n">bowl</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;The bowl has a &quot;</span> <span class="o">+</span> <span class="n">candy</span> <span class="o">+</span> <span class="s">&quot; in it.&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+The bowl has a red in it.
+The bowl has a blue in it.
+The bowl has a red in it.
+The bowl has a red in it.
+The bowl has a green in it.
+The bowl has a yellow in it.
+The bowl has a brown in it.
+The bowl has a red in it.
+The bowl has a yellow in it.
+The bowl has a brown in it.
+The bowl has a green in it.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A common tasks that often comes up is: &quot;Do this task some arbitrary number of times.&quot; For example, &quot;Fill a bowl with 50 random candies.&quot; A canonical method of doing this is to use the function <code>range()</code>.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[60]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c"># range is a function to return lists of arbitrary length</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[61]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">&quot;I did a thing&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+I did a thing
+I did a thing
+I did a thing
+I did a thing
+I did a thing
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[62]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">&quot;I don&#39;t have to do anything with it, but the value of each is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">each</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+I don&apos;t have to do anything with it, but the value of each is 0
+I don&apos;t have to do anything with it, but the value of each is 1
+I don&apos;t have to do anything with it, but the value of each is 2
+I don&apos;t have to do anything with it, but the value of each is 3
+I don&apos;t have to do anything with it, but the value of each is 4
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="while-loop"><code>while</code> loop</h2>
+<p>This look should be used when you don't know how many times something needs to be run. This statement requires a bit more set up, with incrementing a counter.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[65]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nb">sum</span> <span class="o">&lt;=</span><span class="mi">20</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span> <span class="nb">sum</span>
+<span class="k">print</span> <span class="s">&quot;counted to&quot;</span><span class="p">,</span><span class="nb">sum</span><span class="p">,</span><span class="s">&quot;in&quot;</span><span class="p">,</span><span class="n">count</span><span class="p">,</span><span class="s">&quot;steps&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+3
+11
+13
+19
+20
+30
+counted to 30 in 6 steps
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="infinite-loops">Infinite loops</h2>
+<p>There is a pretty big danger of opening up an infinite loop. This a loop that never ends. For example, what if I had forgotten to increase count by the value? It would then always be less than or equal to 20, so the program will never stop running.</p>
+<p>Ways to get out of an infinite loop:</p>
+<p>control+c will kill it (yes, mac users, control even for you).</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="files">Files</h1>
+<p>This bit of code will create a text file with 1,000 random colors. Each color on a newline. Let's start reading through this file, and then we'll return to this code.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[66]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;orange&#39;</span><span class="p">,</span> <span class="s">&#39;fuzzy&#39;</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;colors.txt&#39;</span><span class="p">,</span> <span class="s">&#39;wt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writecolors</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+        <span class="n">writecolors</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">color</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="reading-a-file">Reading a file</h2>
+<p><code>filename = 'filename.txt'</code> This is just the text value of the file path.</p>
+<p>To open and read a text file:</p>
+<p><code>my_file = open(filename, 'rt')</code> This creates your file object. <code>my_text = my_file.read()</code> This reads the text values from the file object. <code>my_file.close()</code> This closes the file. A weird, but important concept.</p>
+<p>Alternative syntax:</p>
+<p><code>with open(filename, 'rt') as my_file:</code><br>         <code>my_text = my_file.read()</code></p>
+<p><code>with</code> has the advantage of taking care of opening and closing the file for you. Once it exists the <code>with</code> block, the file is closed and everything is done.</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[68]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;colors.txt&#39;</span>
+<span class="n">my_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">my_text</span> <span class="o">=</span> <span class="n">my_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[80]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">my_text</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span> <span class="c"># let&#39;s just look at the first 100 characters</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[80]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+
+<pre>
+&apos;green\ngreen\nfuzzy\nred\ngreen\nblue\nblue\norange\ngreen\norange\nblue\norange\norange\nred\ngreen\norange\nfuzzy\n&apos;
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So what do we want to do with this? Maybe count how many times each color is in? I always prefer to use <code>with</code> when possible.</p>
+<p>The Python documentation has a list of methods for files. We've already seen <code>read()</code>, but there is also <code>readlines()</code>. This method will turn the</p>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[81]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;colors.txt&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">my_file</span><span class="p">:</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">my_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[83]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">colors</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;green\n&apos;, &apos;green\n&apos;, &apos;fuzzy\n&apos;, &apos;red\n&apos;, &apos;green\n&apos;, &apos;blue\n&apos;, &apos;blue\n&apos;, &apos;orange\n&apos;, &apos;green\n&apos;, &apos;orange\n&apos;, &apos;blue\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;green\n&apos;, &apos;orange\n&apos;, &apos;fuzzy\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;green\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;fuzzy\n&apos;, &apos;blue\n&apos;, &apos;fuzzy\n&apos;, &apos;green\n&apos;, &apos;fuzzy\n&apos;, &apos;fuzzy\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;orange\n&apos;, &apos;green\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;fuzzy\n&apos;, &apos;red\n&apos;, &apos;green\n&apos;, &apos;blue\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;red\n&apos;, &apos;fuzzy\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;red\n&apos;, &apos;blue\n&apos;, &apos;fuzzy\n&apos;, &apos;blue\n&apos;, &apos;blue\n&apos;, &apos;green\n&apos;, &apos;blue\n&apos;, &apos;red\n&apos;, &apos;red\n&apos;, &apos;red\n&apos;, &apos;fuzzy\n&apos;, &apos;blue\n&apos;, &apos;blue\n&apos;, &apos;red\n&apos;, &apos;red\n&apos;, &apos;fuzzy\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;fuzzy\n&apos;, &apos;orange\n&apos;, &apos;fuzzy\n&apos;, &apos;blue\n&apos;, &apos;orange\n&apos;, &apos;green\n&apos;, &apos;red\n&apos;, &apos;fuzzy\n&apos;, &apos;blue\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;green\n&apos;, &apos;red\n&apos;, &apos;green\n&apos;, &apos;orange\n&apos;, &apos;blue\n&apos;, &apos;green\n&apos;, &apos;blue\n&apos;, &apos;orange\n&apos;, &apos;red\n&apos;, &apos;orange\n&apos;, &apos;blue\n&apos;, &apos;blue\n&apos;, &apos;blue\n&apos;, &apos;red\n&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Neat! But what about all those newlines... Let's meet <code>strip()</code>. This will automatically clean off white space and other crud from the left and right sides of a string.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[85]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">clean_colors</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+    <span class="n">clean_color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">clean_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clean_color</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[86]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="n">clean_colors</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[&apos;green&apos;, &apos;green&apos;, &apos;fuzzy&apos;, &apos;red&apos;, &apos;green&apos;, &apos;blue&apos;, &apos;blue&apos;, &apos;orange&apos;, &apos;green&apos;, &apos;orange&apos;, &apos;blue&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;green&apos;, &apos;orange&apos;, &apos;fuzzy&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;green&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;fuzzy&apos;, &apos;blue&apos;, &apos;fuzzy&apos;, &apos;green&apos;, &apos;fuzzy&apos;, &apos;fuzzy&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;green&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;fuzzy&apos;, &apos;red&apos;, &apos;green&apos;, &apos;blue&apos;, &apos;green&apos;, &apos;green&apos;, &apos;green&apos;, &apos;red&apos;, &apos;fuzzy&apos;, &apos;green&apos;, &apos;green&apos;, &apos;green&apos;, &apos;red&apos;, &apos;blue&apos;, &apos;fuzzy&apos;, &apos;blue&apos;, &apos;blue&apos;, &apos;green&apos;, &apos;blue&apos;, &apos;red&apos;, &apos;red&apos;, &apos;red&apos;, &apos;fuzzy&apos;, &apos;blue&apos;, &apos;blue&apos;, &apos;red&apos;, &apos;red&apos;, &apos;fuzzy&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;fuzzy&apos;, &apos;orange&apos;, &apos;fuzzy&apos;, &apos;blue&apos;, &apos;orange&apos;, &apos;green&apos;, &apos;red&apos;, &apos;fuzzy&apos;, &apos;blue&apos;, &apos;green&apos;, &apos;green&apos;, &apos;green&apos;, &apos;red&apos;, &apos;green&apos;, &apos;orange&apos;, &apos;blue&apos;, &apos;green&apos;, &apos;blue&apos;, &apos;orange&apos;, &apos;red&apos;, &apos;orange&apos;, &apos;blue&apos;, &apos;blue&apos;, &apos;blue&apos;, &apos;red&apos;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
