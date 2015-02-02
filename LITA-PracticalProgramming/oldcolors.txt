@@ -1,8 +1,13 @@
 green
-fizzypop
 green
 fuzzy
 red
+grue
+fuzzy
+fizzy
+pop
+gure
+grue
 green
 blue
 blue
