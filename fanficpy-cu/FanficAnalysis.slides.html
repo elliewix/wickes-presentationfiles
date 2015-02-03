@@ -1735,14 +1735,10 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="fanfiction-analysis">Fanfiction Analysis</h1>
-<ul>
-<li>Question:
-<ul>
-<li>Did I really have one?</li>
-<li>Kind of.</li>
-</ul></li>
-</ul>
+<h1 id="mining-the-poachers">Mining the poachers:</h1>
+<h2 id="quantitative-analysis-of-fanfiction-works-across-two-archives">Quantitative analysis of fanfiction works across two archives</h2>
+<p>Fanfiction, or stories written based on an existing franchise or canon, was first researched in depth by Jenkins (1992) with is publication ?Textual Poachers.? Significant research has been completed into the culture and practices of these writing communities since then, but not much quantitative analysis has been completed on the works themselves. This project focuses on aggregating and providing basic descriptive analytics on works held within two archives: Fanfiction.net and Archive of Our Own. The purpose is to provide aggregate descriptive information on written fan works to inspire future qualitative research questions.</p>
+<p>Metadata for 2.5 million works from Fanfiction.net was compiled, with Archive of Our Own currently in progress. The results suggest that not all fanfiction stories are created equal. This is a fact implicitly understood by fans and researchers, but not measured or described across entire archives. Significant differences have been found with word length across source medias, franchises, and archives. This presentation will summarize the basic descriptive statistics for stories from these two domains, and highlight the significant differences between archives, medias, and franchises. Methods for data collection and processing workflows will also be discussed.</p>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1988,7 +1984,7 @@ In&nbsp;[28]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[31]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">storyidre</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;id=&quot;work_([0-9]+)&quot; role=&quot;article&quot;&gt;&#39;</span><span class="p">)</span>
@@ -2008,10 +2004,142 @@ In&nbsp;[30]:
 </div>
 </div>
 
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="what-i-couldnt-figure-out-about-lxml">What I couldn't figure out about LXML</h3>
+<ul>
+<li>Can I pass it just a string? How?</li>
+<li>The only way I was able to get around this problem was to write out the text to a scratch file and then read it back in.
+<ul>
+<li>This is 100% nuts, but I couldn't get it to work without.</li>
+</ul></li>
+</ul>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
 </div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;scratch.txt&#39;</span><span class="p">,</span><span class="s">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">abpage</span><span class="p">:</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="n">abpage</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTMLParser</span><span class="p">()</span>
+
+<span class="n">lastxpath</span> <span class="o">=</span> <span class="s">&quot;//a[text() = &#39;Last&#39;]/@href&quot;</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)),</span> <span class="n">parser</span><span class="p">)</span>
+<span class="n">last</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">lastxpath</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How can I make <code>etree.parse()</code> work while passing a string object? I tried everything from the documentation and none of it worked.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="data-processing">Data processing</h2>
-<p>All the extracted metadata was dumped into CSV files. The AO3 files were not a problem as far as size, but the FFnet franchises with more than 50k entries were giving me memory problems. Metadata in these cases was extracted into several CSV files that were stitched together at the end.</p>
+<p>All the extracted metadata was dumped into CSV files. The AO3 files were not a problem as far as size, but the FFnet franchises with more than 50k entries were giving me memory problems. Metadata in these cases was extracted into several CSV files that were stitched together to create a large CSV file with all the FF net data.</p>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All FFnet metadata scraping was completed just before this presentation was prepared, so the AO3 metadata scraping has not been automated. As it stands, 2.5 million records were downloaded from FFnet. These data still need to be cleaned up and have sanity evaluations.</p>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Work is underway to download the full text values for stories from specific fandoms. After this, the automated AO3 scrape will be taken up.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="full-text-download">Full text download</h1>
+<h2 id="fanfiction.net">Fanfiction.net</h2>
+<p>FFnet has no link I could find to download the entire story. Story URLs break down as:</p>
+<p><code>https://www.fanfiction.net/s/10913118/1/Naruto-Next-Generation</code> `/[s for story]/[story URI]/[chapter number]/[simple version of title]'</p>
+<p>The title portion and chapter number are optional.</p>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Method of downloading:</p>
+<ul>
+<li>The story URI and chapter numbers are being gathered in the metadata proces.
+<ul>
+<li>Therefore the metadata for all the stories you want to download must be gathered already.</li>
+</ul></li>
+<li>The loop constructs the various story links and downloads those html files.</li>
+<li>This means you have to hit their server for every single chapter.
+<ul>
+<li>50 chapter story? 50 hits.</li>
+<li>for.e.ver.</li>
+</ul></li>
+<li>I played around with the timing for the scrape and found that 20-30 seconds were fine, although I've gotten away with 10 for a while.</li>
+</ul>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ao3">AO3</h2>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>While full text scraping is disallowed within the robots.txt, I emailed them to ask for a data dump and was told to just go ahead and scrape. Their pages are set up to prevent straight forward downloading, but they do have a handy full text download link.</p>
+<p>Which looks like this:</p>
+<ul>
+<li><code>http://www.archiveofourown.org/downloads/my/mysoulislost375/1858989/Naruto%20self%20insertworld%20hopping.html</code></li>
+</ul>
+<p>Which works out to:</p>
+<ul>
+<li><code>http://www.archiveofourown.org/downloads/[first two letters of author's user name]/[author's user (not pen) name]/[story id]/[sanitized version of the story title].html</code></li>
+</ul>
+<p>Given that I already have the metadata downloaded, these links were not difficult to reconstruct. This saved me having to hit the page once to get the download link and again to get the download page. Of the 9,915 total stories, only 445 of my self-generated links failed. Most of these were due to extra periods in the title. This method seems to bypass all their cookie restrictions based on explicitness of the story and the author attempting to prevent downloads.</p>
+<p>I deliberately kept the scraping timing high, to about 30-45 seconds, just to be kind to their servers.</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="basic-descriptives">Basic descriptives</h1>
+<h2 id="word-count">Word Count</h2>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Total number of works from each media type.</p>
+<p><img src = 'numofstories.png'/></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Stories from books were the longest. Plays were the shortest.</p>
+<p><img src = 'wordcountbymedia.png'/></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Works rated Mature were the longest. All ages the shortest.</p>
+<p><img src = 'wordcountbyrating.png'/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="favorites">Favorites</h2>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mature rated fics get the most favorites. All ages the least.</p>
+<p><img src = 'favbyrating.png'/></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Books get the most favorites. Play the least. Note that this trend matches with the word length.</p>
+<p><img src = 'favbymedia.png'/></p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
